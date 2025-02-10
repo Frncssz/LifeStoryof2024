@@ -14,10 +14,18 @@ body {
 /* Hero Section */
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
-                url('/api/placeholder/1920/1080') center/cover no-repeat fixed;
     position: relative;
     overflow: hidden;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
 }
 
 .hero::before {
@@ -27,14 +35,13 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('images/IMG_20230212_180108_850.jpg') center/cover no-repeat;
-    
-    animation: slowZoom 20s infinite alternate;
+    background: rgba(0, 0, 0, 0.4); 
+    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
+    z-index: 3; 
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -46,27 +53,20 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-.hero h1 {
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    animation: fadeIn 1s ease-in;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    backdrop-filter: blur(5px);
-}
 
+.hero::before {
+    animation: none;
+}
 .subtitle {
     font-size: 1.5rem;
     opacity: 0;
     animation: slideUp 1s ease-out forwards;
     animation-delay: 0.5s;
-    background: rgba(0, 0, 0, 0.2);
+   
     padding: 0.5rem 1.5rem;
     border-radius: 5px;
     backdrop-filter: blur(3px);
 }
-
 @keyframes slowZoom {
     from {
         transform: scale(1);
