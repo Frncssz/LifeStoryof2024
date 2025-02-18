@@ -19,16 +19,38 @@
         </div>
     </header>
 
-
     <nav class="main-nav">
+        
         <ul>
-            <li><a href="#highlights">Highlights</a></li>
-            <li><a href="#journey">Journey</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#reflections">Reflections</a></li>
+            <li class="dropdown">
+                <a href="#highlights"><span class="nav-icon icon-home"></span>Highlights</a>
+                <div class="dropdown-content">
+                    <a href="#january">January Adventure</a>
+                    <a href="#spring">School Memories</a>
+                    <a href="#summer">Summer Vacation</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#journey"><span class="nav-icon icon-journey"></span>Journey</a>
+                <div class="dropdown-content">
+                    <a href="#q1">Quarter 1</a>
+                    <a href="#q2">Quarter 2</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#journey"><span class="nav-icon icon-journey"></span>Gallery</a>
+                <div class="dropdown-content">
+                    <a href="#nature">Nature</a>
+                    <a href="#city">City</a>
+                    <a href="#people">People</a>
+                </div>
+            </li>
+            
+
+            <li><a href="#reflections"><span class="nav-icon icon-reflections"></span>Reflections</a></li>
         </ul>
     </nav>
-
+    
     <main>
         <section id="highlights" class="section">
             <h2>2024 Highlights</h2>
@@ -84,23 +106,34 @@ As I kept walking, I knew this was only the beginning. There would be hard times
             </div>
         </section>
 
-        <section id="gallery" class="section">
-            <h2>Memory Gallery</h2>
-            <div class="gallery-grid">
-                <img src="images/Messenger_creation_9898ed4b-d825-466b-97f5-29181296a153.jpeg" alt="Memory 1">
-                <img src="images/Messenger_creation_0F4244FE-1906-4FA1-89B4-128F695874CD.jpeg" alt="Memory 2">
-                <img src="images/IMG20240922133710.jpg" alt="Memory 3">
-                <img src="images/IMG20241018223336.jpg" alt="Memory 4">
-                <img src="images/Messenger_creation_b8f99b74-8024-4268-9653-02ffd56fd6b6.jpeg" alt="Memory 5">
-                <img src="images/Messenger_creation_37b899db-5fa7-4620-a31e-a1ac94ce28ad.jpeg" alt="Memory 6">
-                <img src="images/received_723992646212079.jpeg" alt="Memory 6">
-                <img src="images/received_959935149194194.png" alt="Memory 6">
-                <img src="images/IMG20241104172421.jpg" alt="Memory 6">
-                <img src="images/received_737400724903240.jpeg" alt="Memory 6">
-                <img src="images/IMG20231216154017.jpg" alt="Memory 6">
-                <img src="images/FB_IMG_1697861862763.jpg" alt="Memory 6">
-            </div>
-        </section>
+        
+    <section id="gallery" class="section">
+        <h2>Memory Gallery</h2>
+        <div class="gallery-controls">
+            <button data-category="all" class="active">All</button>
+            <button data-category="nature">Nature</button>
+            <button data-category="city">City</button>
+            <button data-category="people">People</button>
+            
+        </div>
+        <div class="gallery-grid">
+            <img src="images/IMG20240922133710.jpg" alt="Memory 1" data-category="nature">
+            <img src="images/IMG20231216154017.jpg" alt="Memory 3" data-category="nature">
+            <img src="images/IMG20241104172421.jpg" alt="Memory 3" data-category="nature">
+            <img src="images/Messenger_creation_0F4244FE-1906-4FA1-89B4-128F695874CD.jpeg" alt="Memory 2" data-category="city">
+            <img src="images/FB_IMG_1697861862763.jpg" alt="Memory 3" data-category="people">
+            <img src="images/Messenger_creation_37b899db-5fa7-4620-a31e-a1ac94ce28ad.jpeg" alt="Memory 3" data-category="people">
+            <img src="images/Messenger_creation_b8f99b74-8024-4268-9653-02ffd56fd6b6.jpeg" alt="Memory 3" data-category="people">
+            <img src="images/received_723992646212079.jpeg" alt="Memory 3" data-category="people">
+            <img src="images/received_959935149194194.png" alt="Memory 3" data-category="people">
+            <img src="images/received_737400724903240.jpeg" alt="Memory 3" data-category="people">
+            <img src="images/IMG20241018223336.jpg" alt="Memory 3" data-category="people">
+           
+            
+           
+            
+        </div>
+    </section>
 
         <section id="reflections" class="section">
             <h2>Looking Back, Moving Forward</h2>
@@ -128,5 +161,6 @@ As I kept walking, I knew this was only the beginning. There would be hard times
             <p>© 2024 My Life Story</p>
         </div>
     </footer>
+    
 </body>
 </html>
